@@ -1,14 +1,6 @@
-/* =============================================
-   RESET / BASE
-   box-sizing garante que padding nao some
-   na largura dos elementos
-   ============================================= */
-*,
-*::before,
-*::after {
+*, *::before, *::after {
     box-sizing: border-box;
 }
-
 body {
     font-family: 'Lato', sans-serif;
     margin: 0;
@@ -16,17 +8,26 @@ body {
     color: #222;
     line-height: 1.6;
 }
-
-/* =============================================
-   HEADER
-   display:flex alinha logo e texto lado a lado
-   ============================================= */
+h1, h2, h3 {
+    font-family: 'Cinzel', serif;
+}
+h2 {
+    color: #3b1f8c;
+    margin-bottom: 1rem;
+}
+h3 {
+    font-weight: 400;
+    margin-top: 2rem;
+    color: #5c3dbf;
+}
+p {
+    margin-bottom: 1rem;
+}
 header {
     background-color: #2d1b69;
     color: white;
     padding: 2rem;
 }
-
 .header-conteudo {
     display: flex;
     align-items: center;
@@ -34,22 +35,14 @@ header {
     max-width: 90%;
     margin: 0 auto;
 }
-
 .header-conteudo img {
     width: 10%;
     min-width: 5rem;
     height: auto;
 }
-
-/* =============================================
-   NAV
-   display:flex organiza os itens do menu
-   em linha, conforme exigido pelo enunciado
-   ============================================= */
 nav {
     background-color: #1a0f3d;
 }
-
 nav ul {
     display: flex;
     justify-content: center;
@@ -58,7 +51,6 @@ nav ul {
     margin: 0;
     padding: 0;
 }
-
 nav a {
     display: block;
     padding: 1rem 1.5rem;
@@ -66,51 +58,17 @@ nav a {
     text-decoration: none;
     transition: background-color 0.3s;
 }
-
 nav a:hover {
     background-color: #4c2fa0;
 }
-
-/* =============================================
-   MAIN / SECTIONS
-   max-width e margin:auto centralizam
-   o conteudo principal na pagina
-   ============================================= */
 main {
     max-width: 90%;
     margin: 0 auto;
     padding: 2rem;
 }
-
 section {
     margin-bottom: 4rem;
 }
-
-h1 {
-    font-family: 'Cinzel', serif;
-    font-weight: 700;
-}
-
-h2 {
-    font-family: 'Cinzel', serif;
-    font-weight: 700;
-    color: #3b1f8c;
-    margin-bottom: 1rem;
-}
-
-h3 {
-    font-family: 'Cinzel', serif;
-    font-weight: 400;
-    margin-top: 2rem;
-    color: #5c3dbf;
-}
-
-p {
-    margin-bottom: 1rem;
-}
-
-/* Imagens dentro das secoes de conteudo
-   (nao afeta o logo do header) */
 section img {
     display: block;
     width: 100%;
@@ -118,19 +76,12 @@ section img {
     border-radius: 10px;
     margin: 1rem 0;
 }
-
-/* =============================================
-   GALERIA
-   display:flex organiza as fotos lado a lado,
-   flex-wrap quebra linha quando nao ha espaco
-   ============================================= */
 .galeria {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
 }
-
 .galeria img {
     width: 22%;
     min-width: 10rem;
@@ -139,16 +90,14 @@ section img {
     border-radius: 10px;
     transition: transform 0.3s;
 }
-
 .galeria img:hover {
     transform: scale(1.05);
 }
-
-/* =============================================
-   BOTAO VOLTAR AO TOPO
-   display:inline-block permite definir
-   padding em um elemento de link
-   ============================================= */
+#referencias {
+    background-color: #ede8ff;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
 .botao-topo {
     display: inline-block;
     margin-top: 1rem;
@@ -159,35 +108,14 @@ section img {
     border-radius: 5px;
     transition: background-color 0.3s;
 }
-
 .botao-topo:hover {
     background-color: #2d1b69;
 }
-
-/* =============================================
-   BOTAO UNICO DE VOLTAR AO TOPO
-   centralizado entre o conteudo e o footer
-   ============================================= */
 .topo-final {
     display: flex;
     justify-content: center;
     padding: 1rem 2rem 2rem;
 }
-
-/* =============================================
-   SECAO REFERENCIAS
-   background e padding destacam o bloco
-   ============================================= */
-#referencias {
-    background-color: #ede8ff;
-    padding: 1.5rem;
-    border-radius: 10px;
-}
-
-/* =============================================
-   FOOTER
-   text-align:center centraliza o texto
-   ============================================= */
 footer {
     background-color: #1a0f3d;
     color: white;
